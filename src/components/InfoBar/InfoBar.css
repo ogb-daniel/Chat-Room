@@ -1,0 +1,58 @@
+.infoBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(254, 243, 199);
+    border-radius: 4px 4px 0 0;
+    height: 60px;
+    width: 100%;
+  }
+  
+  .leftInnerContainer {
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    color: black;
+  }
+  
+  .rightInnerContainer {
+    display: flex;
+    flex: 0.5;
+    justify-content: flex-end;
+    margin-right: 5%;
+  }
+  
+  .onlineIcon {
+    margin-right: 5%;
+  }
+
+  @keyframes bounce{
+      0%,100%,20%,50%,80%{
+          -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+          transform: translateY(0);
+      }
+      40% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+	60% {
+		-webkit-transform: translateY(-10px);
+		-ms-transform:     translateY(-10px);
+		transform:         translateY(-10px)
+	}
+  }
+
+  .bounce{
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+      
+  }
+
+  .bounce:hover{
+      cursor: pointer;
+      animation-name: bounce;
+  }
