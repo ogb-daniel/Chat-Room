@@ -34,7 +34,7 @@ const Chat = ({location}) => {
         });
 
         return ()=>{
-            socket.emit('disconnects');
+            socket.emit('disconnect');
             socket.off();
         }
 
