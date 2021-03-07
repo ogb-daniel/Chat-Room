@@ -8,7 +8,7 @@ import Input from '../Input/Input';
 import Messages from '../Messages/Messages';
 import { useHistory } from 'react-router';
 import TextContainer from '../TextContainer/TextContainer';
-const ENDPOINT = 'https://react-chat-app-ki.herokuapp.com/';
+const ENDPOINT = 'http://localhost:5000/';
 let socket;
 
 const Chat = ({location}) => {
@@ -29,11 +29,12 @@ const Chat = ({location}) => {
         socket.emit('join',{name,room},(error)=>{
             if(error){
                 alert(error);
+                return history.push('/');
             }
         });
 
         return ()=>{
-            socket.emit('disconnect');
+            socket.emit('disconnects');
             socket.off();
         }
 
