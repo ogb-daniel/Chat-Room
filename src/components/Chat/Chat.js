@@ -8,7 +8,7 @@ import Input from '../Input/Input';
 import Messages from '../Messages/Messages';
 import { useHistory } from 'react-router';
 import TextContainer from '../TextContainer/TextContainer';
-const ENDPOINT = 'http://localhost:5000/';
+const ENDPOINT = 'https://react-chat-app-ki.herokuapp.com/';
 let socket;
 
 const Chat = ({location}) => {
